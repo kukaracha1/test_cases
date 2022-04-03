@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Section 1</name>
+		<description>|||:Header 1|:Header 2
+|| 1 |  
+|| 2 |  
+|| 3 |</description>
+										<sections>
+		<section>
+		<name>Sub-section 1 Testing username</name>
+		<description>The aim of this subsection to test the email verification with emphasiz on the username</description>
+						<cases>
+												<case>
+				<id>C1</id>
+				<title>Test-case 1-negative (missing @ symbol)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter Georgina.gmail.com (without @)</content><expected>Georgina.gmail.com appears in the text field
+
+</expected></step>
+<step>
+<index>2</index><content>Enter the email Georgina.gmail.com by clicking &quot;Create an account&quot; button</content><expected>Error appears: &quot;Invalid email address&quot;
+
+ 
+			
+		   </expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2</id>
+				<title>Test-case 2-negative (using dots at the beginning and the end of the username)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter .ashambardzumyan.@gmail.com</content><expected>.ashambardzumyan.@gmail.com appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email .ashambardzumyan.@gmail.com by clicking &quot;Create an account&quot; button</content><expected>Error appears: &quot;Invalid email address&quot;
+  
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C3</id>
+				<title>Test-case 3-negative (using cyrilic)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter хуммус@mail.ru</content><expected>хуммус@mail.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email хуммус@mail.ru by clicking &quot;Create an account&quot; button</content><expected>Invalid email address</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C13</id>
+				<title>Test-case 4 negative (using more than 64 symbols in the username)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozni@mail.ru</content><expected>agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozni@mail.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozni@mail.ru by clicking &quot;Create an account&quot; button</content><expected>Error appears: &quot;Invalid email address&quot;
+
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C14</id>
+				<title>Test-case 5 positive (using latin alphabet)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter ashambardzumyan@mail.ru</content><expected>ashambardzumyan@mail.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email ashambardzumyan@mail.ru by clicking &quot;Create an account&quot; button</content><expected>New page is opened</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C4</id>
+				<title>Test-case 6-positive (numbers)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter 98982323@mail.ru</content><expected>98982323@mail.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email 98982323@mail.ru by clicking &quot;Create an account&quot; button</content><expected>New page is opened
+
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C5</id>
+				<title>Test-case 7-positive (symbols)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter mozzarella~_u@gmail.com </content><expected>mozzarella~_u@gmail.com  appears in the text field
+
+</expected></step>
+<step>
+<index>2</index><content>Enter the email mozzarella~_u@gmail.com by clicking &quot;Create an account&quot; button</content><expected>New page is opened
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C6</id>
+				<title>Test-case 8 positive (period)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter as......an@mail.ru</content><expected>as......an@mail.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email as......an@mail.ru by clicking &quot;Create an account&quot; button</content><expected>New page is opened
+
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C9</id>
+				<title>Test-case 9 positive (цифры)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter napastak45v@mail.ru</content><expected>napastak45v@mail.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email napastak45v@mail.ru by clicking &quot;Create an account&quot; button</content><expected>New page is opened
+
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C10</id>
+				<title>Test-case 10 positive (using-)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter asham-bardzumyan@mail.ru</content><expected>asham-bardzumyan@mail.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email asham-bardzumyan@mail.ru by clicking &quot;Create an account&quot; button</content><expected>New page is opened
+
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C11</id>
+				<title>Test-case 11 negative  (in the beginning-)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter ashambardzumyan@-mail.ru</content><expected>ashambardzumyan@-mail.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email ashambardzumyan@-mail.ru by clicking &quot;Create an account&quot; button</content><expected>Error appears: &quot;Invalid email address&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C12</id>
+				<title>Test-case 12 negative  (in the end -)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>	
+Tap on email field and enter ashambardzumyan@mail-.ru</content><expected>ashambardzumyan@mail-.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email ashambardzumyan@mail-.ru by clicking &quot;Create an account&quot; button</content><expected>Error appears: &quot;Invalid email address&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+								<sections>
+		<section>
+		<name>Sub Section 2 Testing hostname</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C7</id>
+				<title>Test-case 13 negative (number of components of the hostname exceeds 63)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter napastak@agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozni.ru</content><expected>Tap on email field and enter napastak@agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozni.ru</expected></step>
+<step>
+<index>2</index><content>Enter the email napastak@agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozni.ru by clicking &quot;Create an account&quot; button</content><expected>Error appears: &quot;Invalid email address&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C8</id>
+				<title>Test-case 14-positive (number of components of the hostname less than 63)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter napastak@agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaral.ru</content><expected>napastak@agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaral.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email napastak@agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaral.ru by clicking &quot;Create an account&quot; button</content><expected>New page is opened</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C15</id>
+				<title>Test-case 15 negative (More than 255 characters)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozniagravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozniagravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozniagravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozni@kukaracha.ru</content><expected>agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozniagravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozniagravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozniagravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozni@kukaracha.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email agravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozniagravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozniagravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozniagravaghveskatushunarnetkapikaqaghaghvochkharpighjeyranmaralvozni@kukaracha.ru by clicking &quot;Create an account&quot; button</content><expected>Error appears: &quot;Invalid email address&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C16</id>
+				<title>Test-case 16 negative (empty username before the hostname)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is on the page: http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap on email field and enter @mail.ru</content><expected>enter @mail.ru appears in the text field</expected></step>
+<step>
+<index>2</index><content>Enter the email @mail.ru by clicking &quot;Create an account&quot; button</content><expected>Error appears: &quot;Invalid email address&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+	</sections>
+</suite>
